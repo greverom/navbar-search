@@ -7,24 +7,12 @@ export const CarouselContainer = styled.div`
   padding: 10px 0;
   scrollbar-width: thin; 
   scrollbar-color: #aaa transparent; 
-
-  &::-webkit-scrollbar {
-    height: 8px; 
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #aaa; 
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
 `;
 
 export const CarouselWrapper = styled.div`
   display: flex;
   gap: 10px;
+  justify-content: flex-start;
   align-items: stretch; 
   
   & > div {
