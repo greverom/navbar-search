@@ -1,21 +1,15 @@
 import Modal from "react-modal";
 import { ProductDetailModalProps } from "../../interface/products";
-import { useToast } from "../../hooks/Toast/useToast";
-import {
-  ModalContent, ImageContainer, ProductImage,
-  DetailsContainer, ProductTitle, ProductPrice, ProductDescription,
-  ProductOptions, CloseButton, ModalStyles
-} from "../../styles/productDetailModal";
+import { ModalContent, ImageContainer, ProductImage,
+         DetailsContainer, ProductTitle, ProductPrice, ProductDescription,
+         ProductOptions, CloseButton, ModalStyles
+        } from "../../styles/productDetailModal";
+import { useAddToCart } from "../../hooks/Cart/useCart";
 
-const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ onAddToCart, isOpen, onClose, product, style = ModalStyles }) => {
-  const { showToast } = useToast();
+const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ isOpen, onClose, product, style = ModalStyles }) => {
+  const { handleAddToCart } = useAddToCart();
 
   if (!product) return null;
-
-  const handleAddToCart = () => {
-    onAddToCart(product);
-    showToast("Producto agregado al carrito 🛒", "success");
-  };
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} style={style}>
@@ -33,7 +27,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ onAddToCart, is
           <ProductDescription>{product.description}</ProductDescription>
     
           <ProductOptions>
-            <button onClick={handleAddToCart}>Agregar al carrito</button>
+            <button onClick={() => handleAddToCart(product)}>Agregar al carrito</button>
           </ProductOptions>
         </DetailsContainer>
 

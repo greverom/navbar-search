@@ -4,6 +4,7 @@ import { CategoryContainer, CategoryTitle } from "../../styles/categorySection.s
 import Loading from "../ui/loading";
 import CategoryCarousel from "./categoryCarousel";
 
+
 interface CategorySectionProps {
   category: string;
   title: string;

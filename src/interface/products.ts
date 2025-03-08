@@ -6,7 +6,7 @@ export interface Product {
   description: string;
   image: string;
   quantity?: number;
-  }
+}
 
 export interface ProductDetailModalProps {
   isOpen: boolean;

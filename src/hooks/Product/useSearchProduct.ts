@@ -22,6 +22,7 @@ const useSearchProducts = () => {
   const handleSelectSuggestion = (productTitle: string) => {
     setSearchTerm(productTitle);
     setIsTyping(false);
+    setFilteredProducts([]);
   };
 
   const handleInputChange = (value: string) => {
@@ -29,7 +30,12 @@ const useSearchProducts = () => {
     setIsTyping(true); 
   };
 
-  return { searchTerm, setSearchTerm, filteredProducts, handleSelectSuggestion, handleInputChange };
+  const handleSearchSubmit = () => {
+    setIsTyping(false);
+    setFilteredProducts([]); 
+  };
+
+  return { searchTerm, setSearchTerm, filteredProducts, handleSelectSuggestion, handleSearchSubmit, handleInputChange };
 };
 
 export default useSearchProducts;

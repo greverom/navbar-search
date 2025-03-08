@@ -1,17 +1,18 @@
-import SearchIcon from "@mui/icons-material/Search";
-import useSearchNavigation from "../../../hooks/useSearchNavigation"; 
+import   SearchIcon from "@mui/icons-material/Search";
 import { navbarRoutes } from "../../../config/navbarRoutes";
-import { SearchContainer, CategorySelect, StyledInput, StyledIconButton, StyledMenuItem, SuggestionsContainer,
+import   useSearchBar from "../../../hooks/Product/useSearchBar";
+import { SearchContainer, CategorySelect, StyledInput, StyledIconButton, 
+         StyledMenuItem, SuggestionsContainer,
         } from "../../../styles/navbar";
-import useSearchProducts from "../../../hooks/Product/useSearchProduct";
 
 const SearchBar = () => {
-  const { selectedRoute, handleRouteChange, handleSearch } = useSearchNavigation();
-  const { searchTerm, filteredProducts, handleSelectSuggestion, handleInputChange } = useSearchProducts();
+  const { selectedRoute,  handleRouteChange,  searchTerm,  filteredProducts, 
+          handleSelectSuggestion, handleInputChange, handleSearch, handleKeyPress 
+          } = useSearchBar();
 
   return (
     <SearchContainer>
-     <CategorySelect value={selectedRoute} onChange={handleRouteChange}>
+      <CategorySelect value={selectedRoute} onChange={handleRouteChange}>
         {navbarRoutes.map((route) => (
           <StyledMenuItem key={route.path} value={route.path}>
             {route.name}
@@ -22,6 +23,7 @@ const SearchBar = () => {
         placeholder="Buscar productos..."
         value={searchTerm}
         onChange={(e) => handleInputChange(e.target.value)}
+        onKeyPress={handleKeyPress}
       />
       <StyledIconButton onClick={handleSearch}>
         <SearchIcon />
