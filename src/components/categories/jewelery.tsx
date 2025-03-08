@@ -1,4 +1,4 @@
-import CategorySection from "../product/categorySection";
+import CategorySection from "./categorySection";
 
 const Jewelery = () => {
   return <CategorySection category="jewelery" title="Joyería" />;

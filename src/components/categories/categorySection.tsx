@@ -1,7 +1,8 @@
+import { useAddToCart } from "../../hooks/Cart/useCart";
 import { useProductsByCategory } from "../../hooks/Product/useProductByCategory";
 import { ProductListContainer } from "../../styles/product.style";
+import ProductCard from "../product/productCard";
 import Loading from "../ui/loading";
-import ProductCard from "./productCard";
 
 interface CategorySectionProps {
   category: string;
@@ -10,6 +11,7 @@ interface CategorySectionProps {
 
 const CategorySection: React.FC<CategorySectionProps> = ({ category, title }) => {
   const { products, loading, error } = useProductsByCategory(category);
+  const { handleAddToCart } = useAddToCart();
 
   return (
     <section>
@@ -19,7 +21,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({ category, title }) =>
       {!loading && !error && (
         <ProductListContainer>
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} onAddToCart={() => {}} />
+            <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
           ))}
         </ProductListContainer>
       )}
