@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
 import   RoomIcon from "@mui/icons-material/Room";
 import   AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import   ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import   SearchBar from "./searchBar";
 import { StyledAppBar, StyledToolbar, StyledBox, StyledButton, StyledCartIcon,
        } from "../../../styles/navbar";
+import CartIcon from "../../cart/cartIcon";
 
 const Navbar = () => {
   return (
@@ -38,7 +38,7 @@ const Navbar = () => {
         </StyledButton>
 
         <StyledCartIcon>
-          <ShoppingCartIcon />
+        <CartIcon />
         </StyledCartIcon>
       </StyledToolbar>
     </StyledAppBar>

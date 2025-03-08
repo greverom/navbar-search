@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import AppRoutes from "../../router/appRoute";
 import { LayoutContainer, Content } from "../../styles/layout";
+import Loading from "../ui/loading";
 import Navbar from "../ui/navbar/navbar";
 
 const Layout = () => {
@@ -7,7 +9,9 @@ const Layout = () => {
     <LayoutContainer>
       <Navbar />
       <Content>
-        <AppRoutes /> 
+        <Suspense fallback={<Loading />}> 
+          <AppRoutes />
+        </Suspense>
       </Content>
     </LayoutContainer>
   );

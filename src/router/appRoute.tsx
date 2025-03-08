@@ -1,14 +1,21 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
+import { Suspense, lazy } from "react";
+import Loading from "../components/ui/loading";
+
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Cart = lazy(() => import("../pages/cart"));
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="*" element={<Navigate to="/home" />} />
-    </Routes>
+    <Suspense fallback={<Loading />}> 
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<Navigate to="/home" />} />
+      </Routes>
+    </Suspense>
   );
 };
 
