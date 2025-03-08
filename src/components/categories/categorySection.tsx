@@ -1,8 +1,8 @@
 import { useAddToCart } from "../../hooks/Cart/useCart";
 import { useProductsByCategory } from "../../hooks/Product/useProductByCategory";
-import { ProductListContainer } from "../../styles/product.style";
-import ProductCard from "../product/productCard";
+import { CategoryContainer, CategoryTitle } from "../../styles/categorySection.style";
 import Loading from "../ui/loading";
+import CategoryCarousel from "./categoryCarousel";
 
 interface CategorySectionProps {
   category: string;
@@ -14,18 +14,12 @@ const CategorySection: React.FC<CategorySectionProps> = ({ category, title }) =>
   const { handleAddToCart } = useAddToCart();
 
   return (
-    <section>
-      <h2>{title}</h2>
-      {loading && <Loading />}
-      {error && <p>{error}</p>}
-      {!loading && !error && (
-        <ProductListContainer>
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
-          ))}
-        </ProductListContainer>
-      )}
-    </section>
+    <CategoryContainer>
+    <CategoryTitle>{title}</CategoryTitle>
+    {loading && <Loading />}
+    {error && <p>{error}</p>}
+    {!loading && !error && <CategoryCarousel products={products} onAddToCart={handleAddToCart} />}
+  </CategoryContainer>
   );
 };
 

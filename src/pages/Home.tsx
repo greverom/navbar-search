@@ -7,7 +7,6 @@ import WomenClothing from "../components/categories/womenClothing";
 const Home = () => {
   return (
     <div>
-      <h1>Bienvenido a CindyStore</h1>
       <Electronics />
       <Jewelery />
       <MenClothing />
