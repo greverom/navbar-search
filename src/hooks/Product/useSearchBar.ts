@@ -5,13 +5,8 @@ import useSearchNavigation from "../useSearchNavigation";
 const useSearchBar = () => {
   const navigate = useNavigate();
   const { selectedRoute, handleRouteChange } = useSearchNavigation();
-  const { 
-    searchTerm, 
-    filteredProducts, 
-    handleSelectSuggestion, 
-    handleInputChange, 
-    handleSearchSubmit 
-  } = useSearchProducts();
+  const { searchTerm, filteredProducts, handleSelectSuggestion, 
+          handleInputChange, handleSearchSubmit, shouldSearch } = useSearchProducts();
 
   const handleSearch = () => {
     if (searchTerm.trim() !== "") {
@@ -21,7 +16,7 @@ const useSearchBar = () => {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter"|| shouldSearch) {
       handleSearch();
     }
   };

@@ -6,8 +6,8 @@ import { SearchContainer, CategorySelect, StyledInput, StyledIconButton,
         } from "../../../styles/navbar";
 
 const SearchBar = () => {
-  const { selectedRoute,  handleRouteChange,  searchTerm,  filteredProducts, 
-          handleSelectSuggestion, handleInputChange, handleSearch, handleKeyPress 
+  const { selectedRoute,  handleRouteChange,  searchTerm,  filteredProducts,  
+          handleSelectSuggestion, handleInputChange, handleSearch, handleKeyPress
           } = useSearchBar();
 
   return (

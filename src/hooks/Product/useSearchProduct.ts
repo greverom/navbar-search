@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { Product } from "../../interface/products";
 import useProducts from "./useProducts"; 
+import { useLocation } from "react-router-dom";
 
 const useSearchProducts = () => {
   const { products } = useProducts(); 
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [isTyping, setIsTyping] = useState(false);
+  const [shouldSearch, setShouldSearch] = useState(false);
 
   useEffect(() => {
     if (searchTerm.length >= 1 && isTyping) { 
@@ -23,11 +26,13 @@ const useSearchProducts = () => {
     setSearchTerm(productTitle);
     setIsTyping(false);
     setFilteredProducts([]);
+    setShouldSearch(true);
   };
 
   const handleInputChange = (value: string) => {
     setSearchTerm(value);
     setIsTyping(true); 
+    setShouldSearch(false);
   };
 
   const handleSearchSubmit = () => {
@@ -35,7 +40,14 @@ const useSearchProducts = () => {
     setFilteredProducts([]); 
   };
 
-  return { searchTerm, setSearchTerm, filteredProducts, handleSelectSuggestion, handleSearchSubmit, handleInputChange };
+  useEffect(() => {
+    if (!location.pathname.includes("/search")) {
+      setSearchTerm("");
+    }
+  }, [location.pathname]);
+
+  return { searchTerm, setSearchTerm, filteredProducts, handleSelectSuggestion, 
+           handleSearchSubmit, handleInputChange, shouldSearch};
 };
 
 export default useSearchProducts;
