@@ -29,7 +29,8 @@ export const SearchContainer = styled("div")({
   flexGrow: 1,
   height: "42px",
   maxWidth: "600px",
-  overflow: "hidden",
+
+  position: "relative",
   
   "&:focus-within": {
     borderColor: "#f3a847", 
@@ -69,6 +70,35 @@ export const StyledInput = styled(InputBase)({
 
   "& input": {
     padding: "10px 0",
+  },
+});
+
+
+export const SuggestionsContainer = styled("div")({
+  position: "absolute",
+  top: "110%",
+  left: 0,
+  width: "100%",
+  background: "white",
+  borderRadius: "5px",
+  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+  zIndex: 10,
+  maxHeight: "300px",
+  overflowY: "auto",
+
+  "& div": {
+    padding: "7px 12px",
+    cursor: "pointer",
+    color: "#333",
+    fontSize: "13px",
+    borderBottom: "1px solid #eee",
+    whiteSpace: "nowrap",        
+    overflow: "hidden",          
+    textOverflow: "ellipsis",
+
+    "&:hover": {
+      background: "#f5f5f5",
+    },
   },
 });
 

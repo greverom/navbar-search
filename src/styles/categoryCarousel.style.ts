@@ -11,13 +11,12 @@ export const CarouselContainer = styled.div`
 
 export const CarouselWrapper = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 25px;
   justify-content: flex-start;
   align-items: stretch; 
   
   & > div {
-
-    flex: 0 0 220px; 
-    height: 320px; 
+    flex: 0 0 180px; 
+    height: 280px; 
   }
 `;

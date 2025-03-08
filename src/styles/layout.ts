@@ -13,9 +13,8 @@ export const Content = styled.main`
   padding: 20px;
   margin-top: 80px; 
   background-color: #ffffff;
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 8px;
 `;
