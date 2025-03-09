@@ -75,47 +75,6 @@ export const QuantityText = styled.span`
 `;
 
 
-export const CartIconContainer = styled.div`
-  position: relative;
-  display: inline-block;
-`;
-
-export const CartIconStyled = styled.div`
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: #ff9900;
-    transition: transform 0.2s ease-in-out;
-
-    &:hover {
-      transform: scale(1.1);
-      fill: #ff6600;
-    }
-  }
-`;
-
-export const CartBadge = styled.span`
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: grey;
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const CartHeader = styled.div`
   display: flex;
   justify-content: space-between;
