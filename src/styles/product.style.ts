@@ -9,14 +9,13 @@ export const ProductListContainer = styled.div`
 `;
 
 export const ProductTitle = styled.h3`
-   font-size: 13px;
-  margin: 10px 0;
+  font-size: 13px;
+  margin: 0;
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 20px;
 
   div {
     display: inline-block;
@@ -35,11 +34,10 @@ export const ProductCardContainer = styled.div`
   border: 1px solid rgb(227, 227, 227);
   overflow: hidden;
   height: 100%; 
-  padding: 5px 20px;
+  padding: 5px 14px;
   text-align: center;
   flex-direction: column;
   justify-content: space-between; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out;
 
   &:hover {
@@ -54,10 +52,9 @@ export const ProductCardContainer = styled.div`
 `;
 
 export const ProductImageWrapper = styled.div`
-  width: 70%;
+  width: 100%;
   margin: auto;
-  height: 180px;
-  border-radius: 5px;
+  height: 145px;
   overflow: hidden; 
 `;
 
@@ -69,10 +66,9 @@ export const ProductImage = styled.img`
 
 export const ProductInfo = styled.div`
   display: flex;
+  width: 100%;
   justify-content: space-between; 
   align-items: center;
-  width: 100%;
-
 `;
 
 export const ProductPrice = styled.p`

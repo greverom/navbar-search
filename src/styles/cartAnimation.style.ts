@@ -2,43 +2,61 @@ import styled, { keyframes } from "styled-components";
 
 const floatUp = keyframes`
   0% { 
-    transform: translate(var(--x, 0), 0) scale(0.8);
+    transform: translate(var(--x, 0), 0) scale(0.5) rotate(var(--rotation-start));
+    opacity: 0; 
+  }
+  20% { 
+    transform: translate(var(--x, 0), -5px) scale(.6) rotate(calc(var(--rotation-start) + 100deg));  
+    opacity: 1; 
+  }
+  40% { 
+    transform: translate(var(--x, 0), -10px) scale(.7) rotate(calc(var(--rotation-start) + 144deg));  
+    opacity: 1; 
+  }
+  60% { 
+    transform: translate(var(--x, 3), -15px) scale(.8) rotate(calc(var(--rotation-start) + 216deg));  
+    opacity: 1; 
+  }
+  80% { 
+    transform: translate(var(--x, 5), -20px) scale(1) rotate(calc(var(--rotation-start) + 288deg));  
     opacity: 1; 
   }
   100% { 
-    transform: translate(var(--x, 0), -30px) scale(1.2);
-    opacity: 0; 
+    transform: translate(var(--x, 8), -25px) scale(1.1) rotate(calc(var(--rotation-start) + 360deg));  
+    opacity: .3; 
   }
 `;
 
 export const StarsContainer = styled.div`
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: 30%;
   transform: translateX(-50%);
   display: flex;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 100;
 `;
 
 export const Star = styled.div<{ index: number }>` 
- width: ${({ index }) => `${8 + (index % 3)}px`}; 
-  height: ${({ index }) => `${8 + (index % 3)}px`};
+ width: ${({ index }) => `${14 + (index % 13)}px`}; 
+  height: ${({ index }) => `${14 + (index % 13)}px`};
+    z-index: 1000;
 
   background-color: ${({ index }) =>
-    ["#FFD700", "#FF69B4", "#00BFFF", "#FF4500", "#32CD32"][index % 5]}; 
+    ["#FFD700", "#FF69B4", "#00BFFF", "#FF4500"][index % 4]}; 
 
   border-radius: 50%;
   position: absolute;
-  animation: ${floatUp} 0.7s ease-out;
+   animation: ${floatUp} 0.6s ease-out;
   
-  left: ${({ index }) => `${Math.random() * 10 - 5 + index * 0.5}px`}; /* Menos separación horizontal */
-  top: ${({ index }) => `${Math.random() * 5 - 2 + index * 0.3}px`}; /* Menos separación vertical */
+  left: ${({ index }) => `${(index % 2 === 0 ? 1 : -1) * (2 + index * 0.5)}px`};
+  top: ${({ index }) => `${Math.random() * 5 - 2 + index * 0.3}px`}; 
   opacity: 0;
   
-  --x: ${({ index }) => `${(index % 2 === 0 ? -1 : 1) * (Math.random() * 20 + index * 1.5)}px`}; 
+  --x: ${({ index }) => `${(index % 2 === 0 ? -1 : 1) * (Math.random() * 15 + index * 1.2)}px`}; 
+
+  --rotation-start: ${({ index }) => `${index * 180}deg`};
   
-  z-index: 1000;
    clip-path: polygon(
     50% 0%, 61% 35%, 98% 35%, 
     68% 57%, 79% 91%, 50% 70%, 
@@ -48,12 +66,10 @@ export const Star = styled.div<{ index: number }>`
 
 export const CartIconContainer = styled.div`
   position: relative;
-   z-index: 1;
 `;
 
 export const CartIconStyled = styled.div`
-  width: 36px;
-  height: 36px;
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +82,7 @@ export const CartIconStyled = styled.div`
     transition: transform 0.2s ease-in-out;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       fill: #ff6600;
     }
   }
@@ -74,12 +90,12 @@ export const CartIconStyled = styled.div`
 
 export const CartBadge = styled.span`
   position: absolute;
-  top: -13px;
-  right: -5px;
-  background: red;
+  top: -10px;
+  right: -8px;
+  background:rgb(214, 150, 61);
   color: white;
   font-size: 12px;
   border-radius: 50%;
   padding: 3px 7px;
-   z-index: 20;
+   z-index: 10;
 `;
