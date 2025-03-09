@@ -6,6 +6,10 @@ export interface Product {
   description: string;
   image: string;
   quantity?: number;
+  rating: {
+    rate: number;
+    count: number;
+  }
 }
 
 export interface ProductDetailModalProps {
