@@ -10,11 +10,9 @@ export const LayoutContainer = styled.div`
 
 export const Content = styled.main`
   flex-grow: 1;
-  padding: 20px;
-  margin-top: 80px; 
+  margin-top: 66px; 
   background-color: #ffffff;
-  max-width: 1300px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;
+  padding: 0;
+  overflow-x: hidden;
 `;

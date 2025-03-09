@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom"
 import   Layout from "./components/layout/layout"
 import { CartProvider } from "./context/cart/cartProvider"
 import { ToastProvider } from "./context/Toast/toastProvider"
+import { GlobalStyles } from "./styles/globalStyles";
 
 Modal.setAppElement("#root");
 
@@ -12,7 +13,8 @@ function App() {
     <>
       <ToastProvider> 
         <CartProvider>
-          <BrowserRouter>  
+          <BrowserRouter> 
+          <GlobalStyles />
             <Layout />
           </BrowserRouter>
         </CartProvider>

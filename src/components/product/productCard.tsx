@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { ProductCardProps } from "../../interface/products";
-import { CartIcon } from "../../assets/icons/icons";
 import   ProductDetailModal from "./productDeatilModal";
-import { ProductImage, ProductTitle, ProductPrice, 
+import { ProductImage, ProductTitle,  
          ProductCardContainer, ProductImageWrapper,
-         ProductInfo, CartIconWrapper} from "../../styles/product.style";
+         ProductInfo} from "../../styles/product.style";
 import { useGsapHoverTitle } from "../../hooks/animation/usegsapHoverTitle";
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
@@ -34,10 +33,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
           <div ref={titleRef}>{product.title}</div>
         </ProductTitle>
         <ProductInfo>
-          <ProductPrice>💲{product.price.toFixed(2)}</ProductPrice>
-          <CartIconWrapper onClick={(e) => { e.stopPropagation(); onAddToCart(product); }}>
+          {/* <ProductPrice>💲{product.price.toFixed(2)}</ProductPrice> */}
+          {/* <CartIconWrapper onClick={(e) => { e.stopPropagation(); onAddToCart(product); }}>
             <CartIcon />
-          </CartIconWrapper>
+          </CartIconWrapper> */}
         </ProductInfo>
       </ProductCardContainer>
 

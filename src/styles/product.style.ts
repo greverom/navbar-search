@@ -5,7 +5,6 @@ export const ProductListContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
   padding: 20px auto;
-  margin-top: 3rem;
 `;
 
 export const ProductTitle = styled.h3`
@@ -23,6 +22,7 @@ export const ProductTitle = styled.h3`
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    margin: auto;
     transition: max-width 0.3s ease, overflow 0.3s ease;
   }
 `;
@@ -33,16 +33,14 @@ export const ProductCardContainer = styled.div`
   border-radius: 8px;
   border: 1px solid rgb(227, 227, 227);
   overflow: hidden;
-  height: 100%; 
-  padding: 5px 14px;
+  padding: 8px;
+  width: 90%;
+  margin: auto;
+  height: 100%;
   text-align: center;
   flex-direction: column;
   justify-content: space-between; 
   transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.02);
-  }
 
    &:hover ${ProductTitle} div {
     overflow: visible; 
@@ -52,14 +50,15 @@ export const ProductCardContainer = styled.div`
 `;
 
 export const ProductImageWrapper = styled.div`
-  width: 100%;
+  width: 60%;
   margin: auto;
-  height: 145px;
+  margin-bottom: 10px;
+  height: 90px;
   overflow: hidden; 
 `;
 
 export const ProductImage = styled.img`
-  width: 100%;
+  width: 60%;
   height: 100%;
   object-fit: contain;
 `;

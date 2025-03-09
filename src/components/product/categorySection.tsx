@@ -16,11 +16,11 @@ const CategorySection: React.FC<CategorySectionProps> = ({ category, title }) =>
 
   return (
     <CategoryContainer>
-    <CategoryTitle>{title}</CategoryTitle>
-    {loading && <Loading />}
-    {error && <p>{error}</p>}
-    {!loading && !error && <CategoryCarousel products={products} onAddToCart={handleAddToCart} />}
-  </CategoryContainer>
+      <CategoryTitle>{title}</CategoryTitle>
+      {loading && <Loading />}
+      {error && <p>{error}</p>}
+      {!loading && !error && <CategoryCarousel products={products} onAddToCart={handleAddToCart} category={category} />}
+    </CategoryContainer>
   );
 };
 
