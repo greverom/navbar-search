@@ -10,7 +10,7 @@ interface CategoryCarouselProps {
 
 const CategoryCarousel: React.FC<CategoryCarouselProps> = ({ products, onAddToCart, category }) => {
   const visibleProducts = products.slice(0, 4);
-
+  const formattedCategory = category.toLowerCase().replace(/\s+/g, "-"); 
   return (
     <CarouselContainer>
       <CarouselWrapper>
@@ -18,7 +18,7 @@ const CategoryCarousel: React.FC<CategoryCarouselProps> = ({ products, onAddToCa
           <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
         ))}
       </CarouselWrapper>
-      <ViewMoreButton to={`/category/${category}`}>Ver más</ViewMoreButton> 
+      <ViewMoreButton to={`/categories/${formattedCategory}`}>Ver más</ViewMoreButton> 
     </CarouselContainer>
   );
 };
