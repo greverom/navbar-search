@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CategoryContainer = styled.section`
-  margin-bottom: 20px; 
+  margin-bottom: 10px; 
   padding: 2px 12px;
   border-radius: 8px;
 `;

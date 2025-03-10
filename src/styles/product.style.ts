@@ -32,13 +32,13 @@ export const ProductCardContainer = styled.div`
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  padding: 8px;
+  padding: 5px 0;
   width: 80%;
   margin: auto;
   height: 100%;
   margin-bottom: 10px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   flex-direction: column;
   justify-content: space-between; 
   transition: transform 0.3s ease-in-out;

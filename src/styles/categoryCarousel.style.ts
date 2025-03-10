@@ -8,7 +8,6 @@ export const CarouselContainer = styled.div`
   align-items: center;
   background: white;
   border-radius: 10px;
-  border: 1px solid grey;
   padding: 15px 0px 15px;
 `;
 
@@ -25,7 +24,7 @@ export const ViewMoreButton = styled(Link)`
   text-decoration: none;
   background-color: #ff9900;
   color: white;
-  padding: 8px 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   transition: background 0.3s;
 

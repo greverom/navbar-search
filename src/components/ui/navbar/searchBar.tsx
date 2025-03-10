@@ -1,5 +1,5 @@
 import   SearchIcon from "@mui/icons-material/Search";
-import { navbarRoutes } from "../../../config/navbarRoutes";
+import { navbarRoutes } from "./navbarRoutes";
 import   useSearchBar from "../../../hooks/Product/useSearchBar";
 import { SearchContainer, CategorySelect, StyledInput, StyledIconButton, 
          StyledMenuItem, SuggestionsContainer,

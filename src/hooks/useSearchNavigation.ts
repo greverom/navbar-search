@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SelectChangeEvent } from "@mui/material";
-import { navbarRoutes } from "../config/navbarRoutes"; 
+import { navbarRoutes } from "../components/ui/navbar/navbarRoutes"; 
 
 const useSearchNavigation = () => {
   const [selectedRoute, setSelectedRoute] = useState(navbarRoutes[0].path);

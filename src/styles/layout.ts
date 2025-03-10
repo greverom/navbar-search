@@ -4,7 +4,7 @@ export const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column; 
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: auto;
   min-height: calc(100vh - 80px);
 `;
 
@@ -14,5 +14,5 @@ export const Content = styled.main`
   background-color: #ffffff;
   max-width: 100%;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: auto;
 `;
