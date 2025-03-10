@@ -88,7 +88,6 @@ export const ProductDetails = styled.div`
   gap: 5px;
 `;
 
-/* ⭐ Nuevo: Estilos para el Rating ⭐ */
 export const RatingContainer = styled.div`
   display: flex;
   align-items: center;

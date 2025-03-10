@@ -1,6 +1,6 @@
 import CartList from "../components/cart/cartList";
 import { CartHeader } from "../styles/cart.style";
-import { Container, Title } from "../styles/shopping.style";
+import { Container, Title } from "../styles/cart.style";
 
 export const Cart = () => {
 

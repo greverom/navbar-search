@@ -8,14 +8,13 @@ import { HomeContainer } from "../styles/home.styles";
 const Home = () => {
   return (
     <div>
-
       <ImageSlider />
 
       <HomeContainer>
+        <WomenClothing />
+        <MenClothing />
         <Electronics />
         <Jewelery />
-        <MenClothing />
-        <WomenClothing />
       </HomeContainer>
     </div>
   );

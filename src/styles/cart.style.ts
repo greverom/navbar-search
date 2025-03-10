@@ -1,5 +1,24 @@
 import styled from "styled-components";
 
+
+// estilos de cart Page
+export const Container = styled.div`
+  padding: 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+`;
+
+export const Title = styled.h2`
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+`;
+// estilos de cart Page
+
+
 export const CartItemContainer = styled.div`
   display: flex;
   align-items: center;
@@ -7,6 +26,7 @@ export const CartItemContainer = styled.div`
   padding: 10px;
   border-bottom: 1px solid #ddd;
 `;
+
 
 export const CartItemImage = styled.img`
   width: 60px;
@@ -44,7 +64,6 @@ export const EmptyMessage = styled.p`
   color: #777;
   margin-top: 20px;
 `;
-
 
 export const QuantityControls = styled.div`
   display: flex;

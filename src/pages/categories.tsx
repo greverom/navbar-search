@@ -1,16 +1,9 @@
 
-import { CartHeader } from "../styles/cart.style";
-import { Container } from "../styles/shopping.style";
-
-const CategoriesPage = () => {
+const Categories = () => {
   
   return (
-    <Container>
-     <CartHeader>
-      </CartHeader>
-
-    </Container>
+    <h1>hola</h1>
   );
 };
 
-export default CategoriesPage;
+export default Categories;

@@ -31,13 +31,14 @@ export const ProductCardContainer = styled.div`
   display: flex;
   background: white;
   border-radius: 8px;
-  border: 1px solid rgb(227, 227, 227);
   overflow: hidden;
   padding: 8px;
-  width: 90%;
+  width: 80%;
   margin: auto;
   height: 100%;
+  margin-bottom: 10px;
   text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   justify-content: space-between; 
   transition: transform 0.3s ease-in-out;
@@ -50,15 +51,15 @@ export const ProductCardContainer = styled.div`
 `;
 
 export const ProductImageWrapper = styled.div`
-  width: 60%;
+  width: 80%;
   margin: auto;
-  margin-bottom: 10px;
-  height: 90px;
+  margin-bottom: 8px;
+  height: 100px;
   overflow: hidden; 
 `;
 
 export const ProductImage = styled.img`
-  width: 60%;
+  width: 70%;
   height: 100%;
   object-fit: contain;
 `;

@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100vw; 
     overflow-x: hidden; 
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color:rgb(255, 255, 255);
   }
 
   *, *::before, *::after {

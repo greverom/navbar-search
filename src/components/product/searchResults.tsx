@@ -3,7 +3,7 @@ import Loading from "../ui/loading";
 import { useAddToCart } from "../../hooks/Cart/useCart";
 import { AddToCartButton, ProductDescription, ProductDetails, ProductImage, ProductImageWrapper, ProductInfo, ProductPrice, 
          ProductTitle, RatingContainer, RatingCount, RatingStars, SearchResultItem, SearchResultsContainer } from "../../styles/searchResult.style";
-import StarRating from "../ui/starRating";
+import StarRating from "./starRating";
 
 interface SearchResultsProps {
   query: string;

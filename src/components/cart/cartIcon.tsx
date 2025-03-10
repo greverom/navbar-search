@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../../hooks/Cart/useCart";
-
-
 import { CartIcon as ShoppingCartIcon } from "../../assets/icons/icons";
 import { useEffect, useState } from "react";
 import CartAnimation from "./cartAnimations";

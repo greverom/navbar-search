@@ -7,15 +7,15 @@ export const CarouselContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background: white;
-  padding: 15px;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid grey;
+  padding: 15px 0px 15px;
 `;
 
 export const CarouselWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  gap: 15px;
+  gap: 8px;
   justify-content: center;
   width: 100%;
 `;
@@ -25,9 +25,8 @@ export const ViewMoreButton = styled(Link)`
   text-decoration: none;
   background-color: #ff9900;
   color: white;
-  padding: 8px 18px;
+  padding: 8px 10px;
   border-radius: 5px;
-  font-weight: bold;
   transition: background 0.3s;
 
   &:hover {
