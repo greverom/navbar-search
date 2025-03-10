@@ -5,14 +5,15 @@ export const HomeContainer = styled.div`
   max-width: 100%;
   margin: 0 auto;
   padding: 30px;
-  background-color: rgba(87, 87, 87, 0.14);
+  background-color: rgba(128, 128, 128, 0.11);
   display: flex;
   gap: 25px;
   overflow-x: auto; 
   scroll-behavior: smooth;
   white-space: nowrap;
-  margin: 0 0 30px; 
+  margin: -280px 0 30px; 
   padding-bottom: 25px;
+  z-index: 2;
 
   &::-webkit-scrollbar {
     height: 9px;
@@ -26,11 +27,12 @@ export const HomeContainer = styled.div`
 export const CategoryWrapper = styled.div`
   flex: 0 0 400px; 
   height: 400px; 
-  background: #fff;
+  background: white;
   border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 1;
 `;

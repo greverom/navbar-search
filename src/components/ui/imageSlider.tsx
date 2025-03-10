@@ -5,8 +5,6 @@ import { NextButton, PrevButton, Slide, SliderContainer, SlideWrapper } from "..
 
 const images = [
   "https://picsum.photos/1400/500",
-  "https://picsum.photos/1400/500?grayscale",
-  "https://picsum.photos/1400/500?blur=2",
 ];
 
 const ImageSlider = () => {

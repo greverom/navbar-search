@@ -8,6 +8,7 @@ overlay: {
     justifyContent: "center",
     alignItems: "center",
     inset: 0, 
+    zIndex: 1000,
 },
 content: {
     position: "fixed",
@@ -47,6 +48,7 @@ export const ModalContent = styled.div`
   position: relative;
   outline: none;
   animation: ${popIn} 0.3s ease-out;
+  
 `;
 
 export const ImageContainer = styled.div`

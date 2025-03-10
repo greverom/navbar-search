@@ -8,7 +8,7 @@ export const CarouselContainer = styled.div`
   align-items: center;
   background: white;
   border-radius: 10px;
-  padding: 15px 0px 15px;
+  padding: 5px 0px;
 `;
 
 export const CarouselWrapper = styled.div`

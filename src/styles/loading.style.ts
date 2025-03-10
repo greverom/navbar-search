@@ -26,7 +26,7 @@ export const Spinner = styled.div`
   width: 50px;
   height: 50px;
   border: 6px solid rgba(0, 0, 255, 0); 
-  border-top-color: rgb(64, 177, 183); 
+  border-top-color: rgb(233, 174, 101); 
   border-radius: 50%; 
   animation: ${spin} 0.5s linear infinite;
 `;

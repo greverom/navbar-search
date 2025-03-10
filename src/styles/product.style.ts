@@ -38,7 +38,7 @@ export const ProductCardContainer = styled.div`
   height: 100%;
   margin-bottom: 10px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 10px rgba(142, 142, 142, 0.1);
   flex-direction: column;
   justify-content: space-between; 
   transition: transform 0.3s ease-in-out;
